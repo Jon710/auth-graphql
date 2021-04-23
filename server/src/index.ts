@@ -44,7 +44,7 @@ import { sendRefreshToken } from './sendRefreshToken';
         }
 
         if (user.tokenVersion !== payload.tokenVersion) {
-            return res.send({ ok: false, accesToken: '' })
+            return res.send({ ok: false, accessToken: '' })
         }
 
         sendRefreshToken(res, createRefreshToken(user));
